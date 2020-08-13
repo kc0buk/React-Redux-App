@@ -1,0 +1,1 @@
+export { fetchDataReducer as reducer } from './fetchDataReducer'
