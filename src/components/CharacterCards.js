@@ -35,7 +35,7 @@ const CharacterCards = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        results: state.results[0]
+        results: state.results
     }
 }
 

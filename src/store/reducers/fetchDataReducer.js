@@ -29,10 +29,7 @@ export const fetchDataReducer = (state = initialState, action) => {
                     next: action.payload.info.next,
                     prev: action.payload.info.prev
                 },
-                results: [
-                    ...state.results, 
-                    action.payload.results
-                ],
+                results: action.payload.results,
                 isLoading: false
             }
         case FETCH_DATA_ERROR:
