@@ -1,4 +1,4 @@
-import { FETCH_DATA_START, FETCH_DATA_SUCCESS } from '../actions'
+import { FETCH_DATA_START, FETCH_DATA_SUCCESS, FETCH_DATA_ERROR } from '../actions'
 
 const initialState = {
     info: {
@@ -34,6 +34,12 @@ export const fetchDataReducer = (state = initialState, action) => {
                     action.payload.results
                 ],
                 isLoading: false
+            }
+        case FETCH_DATA_ERROR:
+            return {
+                ...state,
+                isLoading: false,
+                error: action.payload
             }
         default:
             return state

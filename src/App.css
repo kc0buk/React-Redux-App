@@ -1,38 +1,134 @@
-.App {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/* font-size: 100%; */
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+html {
+  box-sizing: border-box;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 3rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  font-size: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  font-size: 1.5rem
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text-gray {
+  color: rgb(158, 158, 158);
+  font-size: 1.4rem;
+}
+
+main {
+  background-color: rgb(32, 35,41);
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+}
+
+.mainWrapper {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 4.5rem 0px;
+}
+
+.characterCard {
+  width: 600px;
+  height: 220px;
+  background-color: rgb(60, 62, 68);
+  color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+  /* flex-direction: column; */
+  /* flex: 2 1 40%; */
+  /* width: 45%; */
+  /* padding: 0.75rem; */
+  margin: 0.75rem;
+}
+
+.imgWrapper {
+  width: 10%;
+  flex: 2 1 0%;
+}
+
+#characterImg {
+  width: 50%;
+  height: 100%;
+  opacity: 1;
+  object-position: center center;
+  object-fit: cover;
+  margin: 0px;
+  transition: opacity 0.5s ease 0s;
+}
+
+.characterDetails {
+  position: relative;
+  color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  flex: 3 1 0%;
+  padding: 0.75rem;
 }
